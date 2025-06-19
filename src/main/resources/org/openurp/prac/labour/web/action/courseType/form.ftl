@@ -1,0 +1,16 @@
+[#ftl]
+[@b.head/]
+[@b.toolbar title="修改课程类别"]bar.addBack();[/@]
+  [@b.form action=b.rest.save(courseType) theme="list"]
+    [@b.textfield name="courseType.code" label="代码" value="${courseType.code!}" required="true" maxlength="20"/]
+    [@b.textfield name="courseType.name" label="名称" value="${courseType.name!}" required="true" maxlength="20"/]
+    [@b.textfield name="courseType.enName" label="英文名" value="${courseType.enName!}" maxlength="100"/]
+    [@b.startend label="有效期"
+      name="courseType.beginOn,courseType.endOn" required="true,false"
+      start=courseType.beginOn end=courseType.endOn format="date"/]
+    [@b.textfield name="courseType.remark" label="备注" value="${courseType.remark!}" maxlength="3"/]
+    [@b.formfoot]
+      [@b.reset/]&nbsp;&nbsp;[@b.submit value="action.submit"/]
+    [/@]
+  [/@]
+[@b.foot/]

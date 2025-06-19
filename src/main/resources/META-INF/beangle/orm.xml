@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orm>
+  <mapping class="org.openurp.prac.labour.model.DefaultMapping" name="prac.labour"/>
+  <naming>
+    <profile package="org.openurp.prac.labour.model" pluralize="true" schema="prac"/>
+  </naming>
+</orm>
